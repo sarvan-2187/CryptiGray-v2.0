@@ -11,6 +11,10 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 def home():
     return render_template("index.html")
 
+@app.route("/docs")
+def docs():
+    return render_template("docs.html")
+
 @app.route("/encrypt-page")
 def encrypt_page():
     return render_template("encrypt.html")
@@ -57,3 +61,4 @@ def download_file(filename):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
